@@ -13,6 +13,8 @@ namespace :swiftlint do
     puts "Downloading swiftlint@#{VERSION}"
     sh [
       "mkdir -p #{DESTINATION}",
+      "echo $PATH",
+      "which curl",
       "curl -L #{URL} -o #{ASSET}",
       "unzip -q #{ASSET} -d #{DESTINATION}",
       "rm #{ASSET}"
